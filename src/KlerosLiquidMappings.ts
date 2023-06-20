@@ -894,9 +894,12 @@ function getOrCreateJuror(address: Address, courtID: BigInt | null, totalStake: 
     juror.coherency = BigInt.fromI32(0)
     juror.numberOfCoherentVotes = BigInt.fromI32(0)
     juror.numberOfVotes = BigInt.fromI32(0)
+    juror.totalGasCost = BigInt.fromI32(0)
     if (courtID !== null){
       let court = getOrCreateCourt(courtID, KLContract)
       juror.subcourtsIDs = [court.id]
+    } else {
+      juror.subcourtsIDs = []
     }
     juror.save()
   }
