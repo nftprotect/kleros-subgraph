@@ -733,6 +733,7 @@ export function getOrInitializeKlerosCounter(): KlerosCounter {
     kc.disputesCount = BigInt.fromI32(0);
     kc.openDisputes = BigInt.fromI32(0);
     kc.closedDisputes = BigInt.fromI32(0);
+    kc.disputesAppealed = BigInt.fromI32(0);
     kc.evidencePhaseDisputes = BigInt.fromI32(0);
     kc.commitPhaseDisputes = BigInt.fromI32(0);
     kc.votingPhaseDisputes = BigInt.fromI32(0);
