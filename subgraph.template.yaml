@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: KlerosLiquid
-    network: {{network}}
+    network: goerli
     source:
-      address: '{{kl_address}}'
+      address: "0x1128eD55ab2d796fa92D2F8E1f336d745354a77A"
       abi: KlerosLiquid
-      startBlock: {{kl_startBlock}}
+      startBlock: 5893941
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -62,11 +62,11 @@ dataSources:
       file: ./src/KlerosLiquidMappings.ts
   - kind: ethereum/contract
     name: PolicyRegistry
-    network: {{network}}
+    network: goerli
     source:
-      address: '{{pr_address}}'
+      address: "0x28c8A3A2E3c8Cd3F795DB83764316a1129a069bA"
       abi: PolicyRegistry
-      startBlock: {{pr_startBlock}}
+      startBlock: 5894121
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -83,11 +83,11 @@ dataSources:
       file: ./src/PolicyRegistryMapping.ts
   - kind: ethereum/contract
     name: KlerosGovernor
-    network: {{network}}
+    network: goerli
     source:
-      address: '{{kg_address}}'
+      address: "0xd74AB183e2B793A68cB3e647D8f4Df60936B59cA"
       abi: KlerosGovernor
-      startBlock: {{kg_startBlock}}
+      startBlock: 7491541
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
