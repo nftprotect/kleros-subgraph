@@ -1,14 +1,14 @@
-specVersion: 0.0.2
+specVersion: 0.0.4
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: KlerosLiquid
-    network: goerli
+    network: sepolia
     source:
-      address: "0x1128eD55ab2d796fa92D2F8E1f336d745354a77A"
       abi: KlerosLiquid
-      startBlock: 5893941
+      address: "0x90992fb4E15ce0C59aEFfb376460Fda4Ee19C879"
+      startBlock: 3635742
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -62,11 +62,11 @@ dataSources:
       file: ./src/KlerosLiquidMappings.ts
   - kind: ethereum/contract
     name: PolicyRegistry
-    network: goerli
+    network: sepolia
     source:
-      address: "0x28c8A3A2E3c8Cd3F795DB83764316a1129a069bA"
       abi: PolicyRegistry
-      startBlock: 5894121
+      address: "0x88Fb25D399310c07d35cB9091b8346d8b1893aa5"
+      startBlock: 3635971
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -81,26 +81,3 @@ dataSources:
         - event: PolicyUpdate(indexed uint256,string)
           handler: handlePolicyUpdate
       file: ./src/PolicyRegistryMapping.ts
-  - kind: ethereum/contract
-    name: KlerosGovernor
-    network: goerli
-    source:
-      address: "0xd74AB183e2B793A68cB3e647D8f4Df60936B59cA"
-      abi: KlerosGovernor
-      startBlock: 7491541
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.6
-      language: wasm/assemblyscript
-      entities:
-        - Court
-        - KlerosLiquid
-      abis:
-        - name: KlerosGovernor
-          file: ./abis/KlerosGovernor.json
-        - name: KlerosLiquid
-          file: ./abis/KlerosLiquid.json
-      callHandlers:
-        - function: executeTransactionList(uint256,uint256,uint256)
-          handler: handlerExecuteTransactionList
-      file: ./src/KlerosGovernor.ts

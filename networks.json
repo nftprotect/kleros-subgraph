@@ -1,0 +1,22 @@
+{
+  "goerli": {
+    "KlerosLiquid": {
+      "address": "0x1128eD55ab2d796fa92D2F8E1f336d745354a77A",
+      "startBlock": 5893941
+    },
+    "PolicyRegistry": {
+      "address": "0x28c8A3A2E3c8Cd3F795DB83764316a1129a069bA",
+      "startBlock": 5894121
+    }
+  },
+  "sepolia": {
+    "KlerosLiquid": {
+      "address": "0x90992fb4E15ce0C59aEFfb376460Fda4Ee19C879",
+      "startBlock": 3635742
+    },
+    "PolicyRegistry": {
+      "address": "0x88Fb25D399310c07d35cB9091b8346d8b1893aa5",
+      "startBlock": 3635971
+    }
+  }
+}
